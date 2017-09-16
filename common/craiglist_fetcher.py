@@ -7,8 +7,12 @@ from craigslist import CraigslistHousing
 for result in cl_h.get_results(sort_by='newest', geotagged=True):
     print result'''
 #CraigslistHousing.show_filters()
-def fetch_housing(site, area, zip_code):
+def fetchHousing(site, area, zip_code):
     houses = CraigslistHousing(site=site, area=area, category='aap', 
                             filters={ 'private_room':True,
                                         'zip_code': zip_code })
     return houses
+
+
+
+

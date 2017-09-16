@@ -1,7 +1,7 @@
-import housing_fetcher
+import craiglist_fetcher
 
 def test_basic():
-    houses = housing_fetcher.fetch_housing('newyork','brk', '11214')
+    houses = craiglist_fetcher.fetchHousing('newyork','brk', '11214')
     #assert type(houses) is object
     print 'test_basic passed.'
     for result in houses.get_results(sort_by='newest', geotagged=True, limit=5):

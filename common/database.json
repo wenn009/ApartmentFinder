@@ -1,0 +1,28 @@
+{
+    {
+        "name": "BEAUTIFUL LARGE 3BR******2 BATHS******EXPOSE BRICK***PRIME LOCATION!!",
+        "area": null,
+        "url": "http://newyork.craigslist.org/brk/abo/d/beautiful-large-3br2/6307723763.html",
+        "where": "CLINTON HILL",
+        "price": "$2799",
+        "bedrooms": 3,
+        "geotag": "(40.692794, -73.95205)",
+        "has_image": true,
+        "datetime": "2017-09-15 20:22",
+        "has_map": true,
+        "id": 6307723763
+    },
+    {
+        "name": "=== MAJOR & HUGE 1BR === CORNER UNIT WITH LOTS OF WINDOWS == NO FEE ==",
+        "area": null,
+        "url": "http://newyork.craigslist.org/brk/abo/d/major-huge-1br-corner-unit/6273051078.html",
+        "where": "EAST WILLIAMSBURG / BUSHWICK ___ L TRAIN",
+        "price": "$2550",
+        "bedrooms": "1",
+        "geotag": "(40.704359, -73.932645)",
+        "has_image": true,
+        "datetime": "2017-09-15 20:01",
+        "has_map": true,
+        "id": 6273051078
+    }
+}
