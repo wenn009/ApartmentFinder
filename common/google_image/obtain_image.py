@@ -20,7 +20,8 @@ def generate_house_image(geo):
     locations = "&location=%s" % geo_str
     #r = requests.get(ADDRESS, params=payload)
     #print r.text
-    print(ADDRESS + urllib.urlencode(payload) + locations)
+    return(ADDRESS + urllib.urlencode(payload) + locations)
 
 
 #generate_house_image(result['geotag'])
+

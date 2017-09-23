@@ -27,7 +27,7 @@ redis_client = redis.StrictRedis(REDIS_HOST, REDIS_PORT)
 
 while True:
     num_houses = 0
-    for zip_code in zipcodes2:
+    for zip_code in BRK_ZIP_CODES:
         houses_list = craiglist_fetcher.fetchHousing(NEW_YORK_STATE, BROOKLYN_CITY, zip_code)
 
         for result in houses_list.get_results(sort_by='newest', geotagged=True, limit=20):
