@@ -31,22 +31,6 @@ const HousingSchema = mongoose.Schema({
 });
 
 
-/*
-{u'name': u'ALL ORIGINAL DETAIL___EXPOSED BRICK___CEILINGS FANS___ROOF DECK___', 
-u'area': None, 
-u'url': u'https://newyork.craigslist.org/brk/abo/d/all-original-detailexposed/6312947322.html', 
-u'has_map': True, 
-u'price': u'$2300', 
-u'bedrooms': u'2', 
-u'zipcode': u'11216', 
-u'geotag': [40.687245, -73.954684], 
-'nearStation': True, 
-'image_url': 'https://maps.googleapis.com/maps/api/streetview?fov=90&pitch=0&key=AIzaSyCkpVrJULDUUBqQEVd_pqK6lIpAkcsQ8Bs&size=400x400&location=40.687245,-73.954684', 
-u'has_image': True, 
-u'datetime': u'2017-09-19 20:09', 
-u'where': u'BED-STUY___G TRAIN @ CLASSON AVE___', 
-u'id': u'6312947322'}*/
-
 const HousingModel = mongoose.model('houses', HousingSchema);
 /*let data = new HousingModel({
   "name" : "HUGE FURNISHED BACKYARD__CENTRAL AIR__LAUNDRY__TONS OF BIG WINDOWS__",
