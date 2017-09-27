@@ -1,10 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const zipData = require('./house_data');
 
 const PORT = process.env.PORT || 8000
 
-
+app.use(cors());
 app.get('/', (req, res) => {
     res.json({ 'hi': 'world' });
 })
