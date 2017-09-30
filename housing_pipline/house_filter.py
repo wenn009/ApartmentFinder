@@ -2,6 +2,7 @@ import os
 import sys
 import json
 from geopy.distance import vincenty
+import customer_update
 
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'common'))
@@ -35,8 +36,13 @@ def handleMsg(msg):
             #obtain image
             task['image_url'] = obtain_image.generate_house_image(task['geotag'])
 
+
         db = mongodb_client.get_db()
         db[HOUSES_TABLE_NAME].replace_one({'id': task['id']}, task, upsert=True)
+
+        customers = customer_update.getCustomers()
+        customer_update.send_update(customers, task)
+
         print task
     else:
         print 'Message is broken'
