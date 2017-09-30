@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
   res.sendFile("index.html", { root:path.join(__dirname, '../client/build/')});
 });
 
+//return houses by zip and price range
 app.get('/api/v1/:zipCode', (req, res) => {
     const records = zipData.byZip[req.params.zipCode];
     if (records === undefined) {
@@ -39,6 +40,7 @@ app.get('/api/v1/:zipCode', (req, res) => {
     }
 });
 
+//user subscription
 app.post('/api/v1/customer_information', (req, res)=>{
     customerData.addCustomer(req.body)
         .then(message => res.json(message));

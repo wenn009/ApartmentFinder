@@ -71,11 +71,10 @@ class CustomerUpdate extends Component {
                 <div className="container">
                     <h1> Subscribe to recieve update </h1>
                 </div>
-                <br />
                 <CustomerUpdateForm handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                     value={this.state.zipcode} />
-                <br /> <br />
+                <br />
                 <div className="container">
                     <div className="col-md-12">
                         {this.state.feedback.length !== 0

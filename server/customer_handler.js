@@ -20,6 +20,7 @@ const addCustomer = function (body) {
     });
 }
 
+//need to be fixed
 const deleteCustomer = function (telephone) {
     console.log("hey?");
     return new Promise((resolve, reject) => {
