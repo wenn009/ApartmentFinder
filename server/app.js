@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const zipData = require('./house_data');
 const customerData = require('./customer_handler');
-//const router = express.Router();
+const path = require('path');
+
 
 const PORT = process.env.PORT || 8000
 //allow cross origin
@@ -13,9 +14,16 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
+// view engine setup
+app.set('views', path.join(__dirname, '../client/build/'));
+app.set('view engine', 'jade');
+app.use('/static', express.static(path.join(__dirname, '../client/build/static/')));
+
+
 app.get('/', (req, res) => {
-    res.json({ 'hi': 'world' });
-})
+  res.sendFile("index.html", { root:path.join(__dirname, '../client/build/')});
+});
+
 app.get('/api/v1/:zipCode', (req, res) => {
     const records = zipData.byZip[req.params.zipCode];
     if (records === undefined) {
