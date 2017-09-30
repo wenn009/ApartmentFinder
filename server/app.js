@@ -26,7 +26,8 @@ app.get('/api/v1/:zipCode', (req, res) => {
     } else {
         const rangeNumber = req.query.priceRange;
         zipData.getHousesByPrice(+rangeNumber, records)
-            .then(houses => res.json(houses));
+            .then(houses => res.json(houses))
+            .catch(err => console.log(err))
     }
 });
 

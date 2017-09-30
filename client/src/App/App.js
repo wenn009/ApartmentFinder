@@ -52,8 +52,8 @@ class App extends Component {
             return <House data={house} key={idx} />
           });
 
-          if(houses.length === 0){
-            houses.push(<CannotFoud/>);
+          if (houses.length === 0) {
+            houses.push(<CannotFoud />);
           }
 
           this.setState({
@@ -69,14 +69,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Find Your Apartment</h2>
-        </div>
-        <br />
+      <div>
         <SearchField handleChange={this.handleChange} handleSearch={this.handleSearch} handlePrice={this.handlePrice} value={this.state.zipCode} />
-        <div>
-          {this.state.houses}
+        <div className="container">
+          <div className="row">
+            {this.state.houses}
+          </div>
         </div>
       </div>
     );

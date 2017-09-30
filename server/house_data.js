@@ -28,10 +28,12 @@ const getHousesByPrice = function (rangeNumber, houses) {
         const houseDataByPrice = [];
         houses.map((house) => {
             HOUSE_PRICE_STRING = house['price']
-            HOUSE_PRICE = parseInt(HOUSE_PRICE_STRING.substring(1)); //remove '$'
-            if (HOUSE_PRICE < PRICE_RANGE_MAP[rangeNumber]
-                && HOUSE_PRICE > PRICE_RANGE_MAP[rangeNumber] - 500) {
-                houseDataByPrice.push(house);
+            if (HOUSE_PRICE_STRING !== null) {
+                HOUSE_PRICE = parseInt(HOUSE_PRICE_STRING.substring(1)); //remove '$'
+                if (HOUSE_PRICE < PRICE_RANGE_MAP[rangeNumber]
+                    && HOUSE_PRICE > PRICE_RANGE_MAP[rangeNumber] - 500) {
+                    houseDataByPrice.push(house);
+                }
             }
         });
         resolve(houseDataByPrice);
