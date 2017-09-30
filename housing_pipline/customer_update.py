@@ -7,8 +7,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'common'))
 
 import mongodb_client
 
-ACCOUNT_SID = "AC72728ceb7358723726c150d26516daf1"
-AUTH_TOKEN = "44a990742cce07d6e056c59660562aed"
+ACCOUNT_SID = ""
+AUTH_TOKEN = ""
 TWILIO_CLIENT = Client(ACCOUNT_SID, AUTH_TOKEN)
 TWILIO_PHONE_NUMBER = "+15162178352"
 

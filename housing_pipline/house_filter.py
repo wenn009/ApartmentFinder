@@ -40,8 +40,9 @@ def handleMsg(msg):
         db = mongodb_client.get_db()
         db[HOUSES_TABLE_NAME].replace_one({'id': task['id']}, task, upsert=True)
 
-        customers = customer_update.getCustomers()
-        customer_update.send_update(customers, task)
+        # send sms to customers, skip now because twilio account dosent have enough credit
+        #customers = customer_update.getCustomers()
+        #scustomer_update.send_update(customers, task)
 
         print task
     else:
